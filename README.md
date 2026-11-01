@@ -1,5 +1,7 @@
 # MINI CyberRT
 
+本仓库地址：[github.com/jzh03/mini-cyberrt](https://github.com/jzh03/mini-cyberrt)。
+
 ## 上游 vs 本人（基于 cmw 的二次开发）
 
 | 维度 | 上游 [cmw](https://github.com/yanglianoo/cmw) | 本仓库（jzh03） |
