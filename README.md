@@ -1,5 +1,18 @@
 # MINI CyberRT
 
+## 上游 vs 本人（基于 cmw 的二次开发）
+
+| 维度 | 上游 [cmw](https://github.com/yanglianoo/cmw) | 本仓库（jzh03） |
+|---|---|---|
+| 规模 | 75 commits / 20★ / 8 forks | 在其基础上新增 34 commits、68 个新文件、+13,383/−4,860 行 |
+| 传输 | INTRA + RTPS 基座 | 新增 INTRA 后端与 INTRA/SHM/RTPS 自动选路（HYBRID） |
+| 零拷贝 | 无 | SHM Loan/View + RAII Lease，generation/epoch 生命周期校验 |
+| 正确性 | — | 修复 5 处上游缺陷（BoundedQueue 丢唤醒、pin_thread 反置、channel_manager LEAVE 索引、RTPS 解码失败仍回调、Participant 关闭顺序） |
+| 验证 | 零散 example | 38 个回归（fast 23 + integration 15）、ASan/TSan 定向、Demo A–E、156KB testlog |
+| 性能 | — | 4 MiB 消息 1586→2804 MiB/s（+77%，VMware x86-64，含全量校验） |
+
+> 上游原有 Discovery、Node、Scheduler、CRoutine、Serialize、ClassLoader 与 SHM 基座等骨架；本仓库只对增量部分主张贡献。
+
 基于 cmw 二次开发的 C++ 发布订阅通信中间件，面向 Linux。主要能力是 Discovery 自动发现、
 INTRA/SHM/RTPS 自动选路、SHM Loan/View，以及配套的生命周期保护和回归测试。
 
@@ -26,8 +39,6 @@ INTRA/SHM/RTPS 自动选路、SHM Loan/View，以及配套的生命周期保护�
 | 回调如何执行 | [调度器](doc/scheduler.md)、[协程](doc/croutine.md)、[基础组件](base/base.md) |
 | 运行测试、sanitizer 或 benchmark | [测试指南](example/TESTING.md) |
 | 查实际命令、失败与复验 | [测试日志](example/testlog.md) |
-| 准备展示与实习面试 | [通信 Demo](example/demo/README.md)、[项目评审](doc/review-20260914.md) |
-| 维护文档与产物目录 | [AGENTS.md](AGENTS.md) |
 
 ## 功能与使用边界
 
