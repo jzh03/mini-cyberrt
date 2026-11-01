@@ -1,6 +1,6 @@
 # MINI CyberRT
 
-基于 cmw 二次开发的 C++ 发布订阅通信中间件，面向 Linux。主要能力是 Discovery 自动发现、
+基于原项目改进的 C++ 发布订阅通信中间件，面向 Linux。原项目：https://github.com/yanglianoo/cmw 。主要能力是 Discovery 自动发现、
 INTRA/SHM/RTPS 自动选路、SHM Loan/View，以及配套的生命周期保护和回归测试。
 
 ## 快速开始
