@@ -1,10 +1,10 @@
 # MINI CyberRT
 
-本仓库地址：[github.com/jzh03/mini-cyberrt](https://github.com/jzh03/mini-cyberrt)。
+本仓库地址：[github.com/jzh03/mini-cyberrt](https://github.com/jzh03/mini-cyberrt)。原项目：[yanglianoo/cmw](https://github.com/yanglianoo/cmw)。
 
-## 上游 vs 本人（基于 cmw 的二次开发）
+## 上游 vs 本人（基于原项目改进）
 
-| 维度 | 上游 [cmw](https://github.com/yanglianoo/cmw) | 本仓库（jzh03） |
+| 维度 | 原项目 [cmw](https://github.com/yanglianoo/cmw) | 本仓库（jzh03） |
 |---|---|---|
 | 规模 | 75 commits / 20★ / 8 forks | 在其基础上新增 34 commits、68 个新文件、+13,383/−4,860 行 |
 | 传输 | INTRA + RTPS 基座 | 新增 INTRA 后端与 INTRA/SHM/RTPS 自动选路（HYBRID） |
@@ -15,7 +15,7 @@
 
 > 上游原有 Discovery、Node、Scheduler、CRoutine、Serialize、ClassLoader 与 SHM 基座等骨架；本仓库只对增量部分主张贡献。
 
-基于 cmw 二次开发的 C++ 发布订阅通信中间件，面向 Linux。主要能力是 Discovery 自动发现、
+基于原项目改进的 C++ 发布订阅通信中间件，面向 Linux。原项目：https://github.com/yanglianoo/cmw 。主要能力是 Discovery 自动发现、
 INTRA/SHM/RTPS 自动选路、SHM Loan/View，以及配套的生命周期保护和回归测试。
 
 ## 快速开始
