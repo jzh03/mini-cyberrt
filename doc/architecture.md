@@ -423,7 +423,7 @@ flowchart TD
 | 消息怎样跨进程 | [通信流程](transport.md) → SHM 或 RTPS Dispatcher → ReceiverManager |
 | 消息怎样触发回调 | DataDispatcher → DataNotifier → [调度器](scheduler.md) → [协程](croutine.md) |
 | 自定义类型怎样编码 | [序列化](serialize.md) → [data_stream.h](../serialize/data_stream.h) |
-| 怎样构建和验证 | [测试指南](../example/TESTING.md)、[测试记录](../example/testlog.md) |
+| 怎样构建和验证 | [测试指南](../example/TESTING.md)、[历史验证概况](../example/testlog.md) |
 
 图和流程表示源码关系，不替代测试证据。实际结果须区分同机 INTRA、跨进程 SHM、同机强制 RTPS、
 受控元数据路由和真实跨主机验证。

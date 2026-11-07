@@ -109,5 +109,5 @@ Discovery Participant 的创建失败会向上返回；显式关闭会等待在�
 3. 检查实际后端是否启用，以及共享区、容量或 Fast DDS 错误。
 4. 检查接收端是否通过边界和解码校验，再检查 DataVisitor 与调度任务。
 
-可按[测试指南](../example/TESTING.md#面试通信-demo)运行通信 Demo；测试范围和历史结果分别见
-[测试指南](../example/TESTING.md)与[测试记录](../example/testlog.md)。
+可按[测试指南](../example/TESTING.md#面试通信-demo)运行通信 Demo；测试范围见
+[测试覆盖](../example/TESTING.md#测试覆盖)，历史结果见[验证概况](../example/testlog.md)。
