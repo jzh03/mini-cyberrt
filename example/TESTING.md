@@ -1,6 +1,6 @@
 # 构建、测试与性能实验
 
-本页命令均从**仓库根目录**执行，是可复用示例；实际执行记录见 [testlog](testlog.md)。
+本页命令均从**仓库根目录**执行，是可复用示例；历史验证概况见 [testlog](testlog.md)。
 通信演示见 [Demo 指南](demo/README.md)，Fast DDS 安装检查见 [Fast DDS 环境](../doc/fastrtps.md)。
 
 ## 先跑快速回归
@@ -248,7 +248,7 @@ PYTHONDONTWRITEBYTECODE=1 unshare --user --map-root-user --ipc \
 
 结果目录包含 `manifest.json`、`results.csv`、`summary.json/md`；任一子进程、内容、阶段、计数或 CPU 边界检查失败，
 整组非零退出。该实验测量内容生成、传输和全量校验，不是纯带宽或延迟测试，不能外推无损容量或跨主机性能。
-[已有三轮结果](testlog.md#2026-09-11-独立进程-shm-性能实验)。
+三轮历史结果见[性能实验概况](testlog.md#2026-09-11-独立进程-shm-性能实验)。
 
 ## 环境与清理
 

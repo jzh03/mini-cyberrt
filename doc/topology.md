@@ -121,4 +121,4 @@ Shutdown 则是终止操作，不支持重启。重新初始化前应释放旧 N
 4. [topology_manager.cpp](../discovery/topology_manager.cpp)：初始化回滚、Participant 离线与显式关闭。
 5. [transport_mode.h](../config/transport_mode.h)：IP/PID 自动选路规则。
 
-运行方法见[测试指南](../example/TESTING.md)，实际结果见[测试记录](../example/testlog.md)。
+运行方法与覆盖范围见[测试指南](../example/TESTING.md)，历史结果见[验证概况](../example/testlog.md)。
